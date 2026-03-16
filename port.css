@@ -1,0 +1,44 @@
+.sobrenós{
+    background-color: rgb(22, 106, 184);
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 10px;  
+}
+.sobrenós:hover{
+    background-color: rgb(12, 73, 158);
+    cursor: pointer;
+}
+
+.serviços{
+    background-color: rgb(22, 106, 184);
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 10px;
+}
+.serviços:hover{
+    background-color: rgb(12, 73, 158);
+    cursor:pointer;
+}
+
+.contatos{
+     background-color: rgb(22, 106, 184);
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 10px;
+}
+.contatos:hover{
+      background-color: rgb(12, 73, 158);
+    cursor:pointer;
+}
+
+.projetos{
+    background-color: rgb(22, 106, 184);
+    font-size: 18px;
+    padding: 18px;
+    border-radius: 10px;
+}
+.projetos:hover{
+          background-color: rgb(12, 73, 158);
+    cursor:pointer
+  
+}
