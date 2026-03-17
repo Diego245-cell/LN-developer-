@@ -1,15 +1,26 @@
+.body{
+    background:blue;
+}
+
+
+
+
+
+
+
 .menu{
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: baseline;
     background-color: #3157b1;
-    padding: 20px 50px;
+    padding: 20px 40px;
 }
 
 .menu{
     position: fixed;
     top: 0;
     width: 100%;
+    left: 0;
 }
 
 .logo{
@@ -34,8 +45,53 @@
     text-align: center;
     text-decoration: underline;
     font-size: 25px;
+    color: white;
 }
 
 .solucoes{
+    color: white;
+    margin-top: -50px;
     text-align: center;
+    font-size: 15px;
+}
+
+.saibamais{
+    margin-top: 40px;
+    font-size: 40px;
+    text-align: center;
+
+}
+
+.saibamais:hover{
+    transform: scale(1.07);
+    transition: 0.3s;
+    ;
+}
+
+button:hover{
+    background:blue;
+    cursor: pointer;
+}
+
+
+.servicos{
+    display: flex;
+    justify-content: space-around;
+    gap: 20px;
+    padding: 40px;
+    color: rgb(229, 226, 226);
+    font-size: 15px;
+}
+
+.card{
+    width: 30%;
+    background: rgba(255, 255, 255, 0.079);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.card:hover{
+    transform: scale(1.05);
+    transition: 0.3s;
 }
