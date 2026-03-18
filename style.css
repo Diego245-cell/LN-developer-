@@ -1,112 +1,241 @@
-.body{
-    background:black;
+/* RESET BÁSICO */
+body {
+    overflow-x: hidden;
+    margin: 0;
+    font-family: Arial, sans-serif;
 }
 
-
-
-
-
-
-
-.menu{
+/* MENU */
+.menu {
     display: flex;
     justify-content: space-between;
-    align-items: baseline;
-    background-color: #192030;
-    padding: 20px 40px;
+    align-items: center;
+    padding: 15px 40px;
+    background: black;
+    color: white;
+}
+
+.logo {
+    font-size: 24px;
+}
+
+.indice a {
+    color: white;
+    text-decoration: none;
+
+    margin-left: 20px;
+    font-weight: bold;
+}
+
+.indice a:hover {
+    color: #00c3ff;
+}
+
+/* HERO */
+.conteudo {
+    height: 100vh;
+    background-image: url("WhatsApp\ Image\ 2026-03-18\ at\ 09.07.13\ \(1\).jpeg"); 
+
+    background-size: cover;
+    background-position: center;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    color: white;
+}
+
+.conteudo h1 {
+    font-size: 50px;
+    margin-bottom: 20px;
+}
+
+.solucoes {
+    margin-bottom: 20px;
+}
+
+/* BOTÃO */
+button {
+    background: #007bff;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 20px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+/* SERVIÇOS */
+.servicos {
+    margin-top: -80px; /* efeito de sobreposição */
+    background: black;
+    padding: 60px 20px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+/* CARDS */
+.card {
+    background: #111;
+    padding: 25px;
+    border-radius: 10px;
+    width: 250px;
+    text-align: center;
+    color: white;
+
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+.icon {
+    font-size: 40px;
+    color: #00c3ff;
+    margin-bottom: 15px;
+}
+
+.card:hover .icon {
+    color:#007bff;
+    transform: scale(1.2);
+    transition: 0,3s;
+}
+
+.projetos {
+    background: #0a0a0a;
+    color: white;
+    padding: 80px 20px;
+    text-align: center;
+}
+
+.projetos h2 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.projetos .cat {
+    margin-bottom: 40px;
+    color: #aaa;
+}
+
+.grid-projetos {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.projeto-card {
+    background: #111;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 300px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.projeto-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.projeto-card .info {
+    padding: 15px;
+}
+
+.projeto-card:hover {
+      transform: translateY(-10px) scale(1.02);
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 .menu{
     position: fixed;
     top: 0;
     width: 100%;
-    left: 0;
+    z-index: 1000;
+
 }
 
-.logo{
-    color: white;
-    font-size: 24px;
+menu.scrolled {
+    box-shadow: 0 2px 10px rgba(23, 1, 1, 0.5);
 }
 
-.menu nav a{
-    color: white;
-    text-decoration: none;
-    margin-left: 20px;
-    font-size: 16px;
+.conteudo {
+    background: linear-gradient(rgba(0,0,0,0,7),rgba(0,0,0,7)), url("WhatsApp\ Image\ 2026-03-18\ at\ 09.07.13\ \(1\).jpeg")    
+}
+.conteudo h1 {
+    font-size: 50px;
 }
 
-.menu nav a:hover{
-    color: #050e1e;
+@media (max-width: 768px) {
+    .conteudo h1 {
+        font-size: 30px;
+    }
+}
+
+.conteudo {
+    opacity: 1;
+    transform: translateY(10px);
+    animation: aparecer 1s forwards, zoomBg 10s infinite alternate;
+
+     animation: zoomBg 10s infinite alternate;
+
+      background: linear-gradient(rgba(0,0,0,0,7),rgba(0,0,0,7)), url("WhatsApp\ Image\ 2026-03-18\ at\ 09.07.13\ \(1\).jpeg"); 
+      
+      background-size: 100%;
+      background-position: center;
+}
+
+@keyframes zoomBg {
+    from {
+        background-size: 200%;
+    }
+    to{
+        background-size: 110%;
+    }
+}
+
+.card {
+    opacity: 40;
+    transform: translateY(50px);
+    animation: aparecer 0.8s forwards;
+}
+
+@media (max-width: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align:center;
+    }
+
+    .indice {
+    margin-top: 10px;
+    }
+
+    .servicos {
+    flex-direction: column;
+    align-items:center;
+    }
+
+    .grid-projetos {
+    flex-direction: column;
+    align-items: center;
+    }
+
 }
 
 .conteudo{
-    margin-top: 120px;
-    padding: 40px;
-    text-align: center;
-    text-decoration: underline;
-    font-size: 25px;
-    color: white;
-}
-
-.solucoes{
-    color: white;
-    margin-top: -50px;
-    text-align: center;
-    font-size: 15px;
-}
-
-.saibamais{
-    margin-top: 40px;
-    font-size: 40px;
-    text-align: center;
-
-}
-
-.saibamais:hover{
-    transform: scale(1.07);
-    transition: 0.3s;
-    ;
-}
-
-button:hover{
-    background:blue;
-    cursor: pointer;
-}
-
-
-.servicos{
-    display: flex;
-    justify-content: space-around;
-    gap: 20px;
-    padding: 40px;
-    color: rgb(229, 226, 226);
-    font-size: 15px;
-}
-
-.card{
-    width: 30%;
-    background: rgba(255, 255, 255, 0.079);
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.card:hover{
-    transform: scale(1.05);
-    transition: 0.3s;
-}
-
-.project{
-    margin-top: 120px;
-    color: white;
-    padding: 20px;
-    text-align: left;
-    text-decoration: underline;
-    
-}
-
-.cat{
-    color: white;
-    margin-top: -50px;
-    padding: 20px;
+    margin-top: 80px;
 }
