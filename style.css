@@ -10,13 +10,14 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 40px;
+    padding: 15px 20px;
     background: black;
     color: white;
 }
 
 .logo {
     font-size: 24px;
+    font-weight: bold;
 }
 
 .indice a {
@@ -31,6 +32,12 @@ body {
     color: #00c3ff;
 }
 
+.indice {
+    display: flex;
+    gap: 15px;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+}
 /* HERO */
 .conteudo {
     height: 100vh;
@@ -80,9 +87,30 @@ button:hover {
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 
 }
 
+@media (max-widht: 768px) {
+    .menu {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .indice {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-widht: 768px) {
+    .logo {
+        margin-bottom: 10px;
+    }
+    .indice a {
+        font-size: 14px;
+    }
+}
 /* CARDS */
 .card {
     background: #111;
@@ -321,3 +349,131 @@ menu.scrolled {
     font-size: 14px;
     color: #aaa;
 }
+
+
+.planos {
+    padding: 80px 20px;
+    text-align: center;
+    background: #0a0f1c;
+    color: white;
+}
+
+.container-planos {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    flex-wrap: wrap;
+}
+
+/* SERVIÇOS */
+.servicos-lista {
+    max-width: 250px;
+    text-align: left;
+}
+
+/* CARDS */
+.cards {
+    display: flex;
+    gap: 20px;
+}
+
+.card {
+    background: linear-gradient(180deg, #0d1b2a, #1b263b);
+    padding: 25px;
+    border-radius: 15px;
+    width: 220px;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: translateY(-10px);
+}
+
+.preco {
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+.card button {
+    margin-top: 15px;
+    padding: 10px;
+    border: none;
+    background: #007bff;
+    color: white;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+/* DESTAQUE */
+.destaque {
+    transform: scale(1.1);
+    border: 2px solid #00c3ff;
+}
+
+.premium {
+    border: 2px solid gold;
+}
+
+/* CONTATO */
+.contato {
+    max-width: 250px;
+    text-align: left;
+}
+
+.contato input,
+.contato textarea {
+    width: 100%;
+    margin: 5px 0;
+    padding: 8px;
+    border-radius: 8px;
+    border: none;
+}
+
+.contato button {
+    width: 100%;
+    padding: 10px;
+    background: gold;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    overflow: hidden;
+}
+
+.slider {
+    display: flex;
+    gap: 20px;
+    transition: transform 0.5s ease;
+}
+
+.card {
+    min-width: 250px;
+    background: #1b263b;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+/* BOTÕES */
+.prev, .next {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0,0,0,0.6);
+    color: white;
+    border: none;
+    font-size: 25px;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.prev { left: 0; }
+.next { right: 0; }
