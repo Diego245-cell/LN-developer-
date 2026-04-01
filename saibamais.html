@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saiba Mais</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <section class="planos">
+
+    <h2>Saiba Mais</h2>
+
+    <div class="container-planos">
+
+        <!-- SERVIÇOS -->
+        <div class="servicos-lista">
+            <h3>Nossos Serviços</h3>
+            <ul>
+                <li>✔ Consultoria</li>
+                <li>✔ Desenvolvimento Web</li>
+                <li>✔ Marketing Digital</li>
+                <li>✔ Suporte Técnico</li>
+            </ul>
+        </div>
+
+        <div class="slider container">
+
+            <button class="prev">&#10094;</button>
+
+            <div class="slider" id="slider">
+
+                <div class="card">Plano Básico</div>
+                <div class="card">Plano Profissional</div>
+                <div class="card">Plano Premium</div>
+
+            </div>
+            
+            <button class="next">&#10095;</button>
+
+        </div>
+
+        <!-- CONTATO -->
+        <div class="contato">
+            <h3>Contato</h3>
+            <p>📞 (11) 1234-5678</p>
+            <p>📧 contato@lndeveloper.com</p>
+
+            <form>
+                <input type="text" placeholder="Nome">
+                <input type="email" placeholder="E-mail">
+                <textarea placeholder="Mensagem"></textarea>
+                <button type="submit">Enviar</button>
+            </form>
+        </div>
+
+    </div>
+
+</section>
+</body>
+<script>
+const slider = document.getElementById("slider");
+
+let scrollAmount = 0;
+
+document.querySelector(".next").addEventListener("click", () => {
+    scrollAmount += 270; // largura do card + gap
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+});
+
+document.querySelector(".prev").addEventListener("click", () => {
+    scrollAmount -= 270;
+
+    if(scrollAmount < 0){
+        scrollAmount = 0;
+    }
+
+    slider.style.transform = `translateX(-${scrollAmount}px)`;
+});
+</script>
+</html>
